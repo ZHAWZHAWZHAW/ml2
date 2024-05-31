@@ -3,6 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 from transformers import BartTokenizer, BartForConditionalGeneration, T5Tokenizer, T5ForConditionalGeneration
 
+# Pfade zu den lokalen Modellen
+#bart_model_path = "pre-trained_model/bart_model"
+#t5_model_path = "fine-tuned_model/t5_base"
+#fine_tuned_model_path = "fine-tuned_model/results/final_model"
+
 # Pfade zu den Modellen
 bart_model_path = "pre-trained_model/bart_model"
 t5_model_path = "fine-tuned_model/t5_base"
