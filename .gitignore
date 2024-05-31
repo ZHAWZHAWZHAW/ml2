@@ -18,6 +18,3 @@ pre-trained_model/bart_model/
 
 # MacOS spezifische Datei
 .DS_Store
-
-# Testdateien
-test.py
