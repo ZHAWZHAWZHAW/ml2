@@ -1,0 +1,15 @@
+# Python Bytecode
+*.pyc
+__pycache__/
+
+# Virtuelle Umgebung
+.venv/
+
+# Log-Dateien
+*.log
+
+# MacOS spezifische Datei
+.DS_Store
+
+# Testdateien
+test.py
