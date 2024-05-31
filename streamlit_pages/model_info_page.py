@@ -3,10 +3,21 @@ import streamlit as st
 from transformers import BartForConditionalGeneration, BartTokenizer, T5ForConditionalGeneration, T5Tokenizer
 import pandas as pd
 import os
-# Lokale Pfade zu den Modellen
+
+###################################################################################################
+
+# Pfade zu den Modellen, die eigenständig / lokal erstellt & trainiert wurden
+#bart_model_path = "pre-trained_model/bart_model"
+#t5_model_path = "fine-tuned_model/t5_base"
+#fine_tuned_model_path = "fine-tuned_model/results/final_model"
+
+# Pfade zu den Modellen, welche von Google Drive in streamlit_pages geladen wurden
 bart_model_path = "streamlit_models/bart_model"
 t5_model_path = "streamlit_models/t5_base_model"
 fine_tuned_model_path = "streamlit_models/fine_tuned_model"
+
+###################################################################################################
+
 # Laden der Modelle und Tokenizer
 bart_tokenizer = BartTokenizer.from_pretrained(bart_model_path)
 bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path, use_safetensors=True)
