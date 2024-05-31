@@ -1,13 +1,12 @@
+
 import streamlit as st
 from transformers import BartForConditionalGeneration, BartTokenizer, T5ForConditionalGeneration, T5Tokenizer
 import pandas as pd
 import os
-
 # Lokale Pfade zu den Modellen
 bart_model_path = "streamlit_models/bart_model"
 t5_model_path = "streamlit_models/t5_base_model"
 fine_tuned_model_path = "streamlit_models/fine_tuned_model"
-
 # Laden der Modelle und Tokenizer
 bart_tokenizer = BartTokenizer.from_pretrained(bart_model_path)
 bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path, use_safetensors=True)
@@ -15,7 +14,6 @@ t5_tokenizer = T5Tokenizer.from_pretrained(t5_model_path)
 t5_model = T5ForConditionalGeneration.from_pretrained(t5_model_path, use_safetensors=True)
 fine_tuned_tokenizer = T5Tokenizer.from_pretrained(fine_tuned_model_path)
 fine_tuned_model = T5ForConditionalGeneration.from_pretrained(fine_tuned_model_path, use_safetensors=True)
-
 def get_model_info(model):
     return {
         "Model Name": model.config.name_or_path,
@@ -27,17 +25,13 @@ def get_model_info(model):
         "Number of Layers": str(model.config.num_layers if hasattr(model.config, 'num_layers') else model.config.encoder_layers),
         "Vocabulary Size": str(model.config.vocab_size),
     }
-
 def show_model_info_page():
     st.header("📊 Model Information")
-
     bart_info = get_model_info(bart_model)
     t5_info = get_model_info(t5_model)
     fine_tuned_info = get_model_info(fine_tuned_model)
-
     df = pd.DataFrame([bart_info, t5_info, fine_tuned_info], index=["BART Model", "T5 Base Model", "Fine-tuned T5 Model"]).transpose()
     st.table(df)
-
     st.write("""
     ### Difference between T5 Base Model and Fine-tuned T5 Model
     The T5 Base model and the fine-tuned T5 model have the same architecture parameters because the fine-tuned model is based on the T5 Base model. 

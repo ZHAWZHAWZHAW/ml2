@@ -1,16 +1,14 @@
+
 import streamlit as st
 import logging
 import os
 import gdown
-
 # Set logging level to suppress the special tokens warning
 logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
-
 # Funktion zum Herunterladen der Dateien von Google Drive
 def download_file(url, output):
     if not os.path.exists(output):
         gdown.download(url, output, quiet=False)
-
 # Google Drive URLs zu den Modell-Dateien
 model_files = {
     "bart": {
@@ -41,25 +39,21 @@ model_files = {
         "tokenizer_config.json": "https://drive.google.com/uc?id=1VtOSN74rhuqoYtV084u9qwZ8I6tmBy5y"
     }
 }
-
 # Lokale Pfade zum Speichern der Modell-Dateien
 model_paths = {
     "bart": "streamlit_models/bart_model",
     "t5_base": "streamlit_models/t5_base_model",
     "fine_tuned": "streamlit_models/fine_tuned_model"
 }
-
 # Erstellen der Verzeichnisse und Herunterladen der Dateien, falls nicht vorhanden
 for model, files in model_files.items():
     os.makedirs(model_paths[model], exist_ok=True)
     for file_name, url in files.items():
         download_file(url, os.path.join(model_paths[model], file_name))
-
 from streamlit_pages.summarizepdf_page import show_summarizepdf_page
 from streamlit_pages.model_info_page import show_model_info_page
 from streamlit_pages.home_page import show_home_page
 from streamlit_pages.summarizeurl_page import show_summarizeurl_page
-
 st.markdown("""
     <style>
         body {
@@ -93,10 +87,8 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
-
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "Summarize PDFs", "Summarize URLs", "Model Info"])
-
 if page == "Home":
     show_home_page()
 elif page == "Summarize PDFs":
@@ -105,7 +97,6 @@ elif page == "Summarize URLs":
     show_summarizeurl_page()
 elif page == "Model Info":
     show_model_info_page()
-
 # Footer
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("FS 2024: ML2 Project, Linus Schneeberger", unsafe_allow_html=True)

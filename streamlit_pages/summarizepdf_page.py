@@ -1,12 +1,11 @@
+
 import streamlit as st
 import fitz  # PyMuPDF for PDF processing
 from transformers import BartTokenizer, BartForConditionalGeneration, T5Tokenizer, T5ForConditionalGeneration
-
 # Pfade zu den Modellen
 bart_model_path = "streamlit_models/bart_model"
 t5_model_path = "streamlit_models/t5_base_model"
 fine_tuned_model_path = "streamlit_models/fine_tuned_model"
-
 # Laden der Modelle und Tokenizer
 bart_tokenizer = BartTokenizer.from_pretrained(bart_model_path)
 bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path, use_safetensors=True)
@@ -14,7 +13,6 @@ t5_base_tokenizer = T5Tokenizer.from_pretrained(t5_model_path)
 t5_base_model = T5ForConditionalGeneration.from_pretrained(t5_model_path, use_safetensors=True)
 fine_tuned_tokenizer = T5Tokenizer.from_pretrained(fine_tuned_model_path)
 fine_tuned_model = T5ForConditionalGeneration.from_pretrained(fine_tuned_model_path, use_safetensors=True)
-
 def read_pdf(uploaded_file):
     if uploaded_file is not None:
         file_stream = uploaded_file.read()
@@ -25,7 +23,6 @@ def read_pdf(uploaded_file):
         document.close()
         return text
     return ""
-
 def summarize_text_with_bart(text):
     inputs = bart_tokenizer(text, return_tensors="pt", max_length=1024, truncation=True)
     summary_ids = bart_model.generate(
@@ -38,7 +35,6 @@ def summarize_text_with_bart(text):
     )
     summary = bart_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return summary
-
 def summarize_text_with_t5_base(text):
     inputs = t5_base_tokenizer(text, return_tensors="pt", max_length=512, truncation=True)
     summary_ids = t5_base_model.generate(
@@ -49,7 +45,6 @@ def summarize_text_with_t5_base(text):
     )
     summary = t5_base_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return summary
-
 def summarize_text_with_fine_tuned_model(text):
     inputs = fine_tuned_tokenizer(text, return_tensors="pt", max_length=512, truncation=True)
     summary_ids = fine_tuned_model.generate(
@@ -60,7 +55,6 @@ def summarize_text_with_fine_tuned_model(text):
     )
     summary = fine_tuned_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return summary
-
 def show_summarizepdf_page():
     st.title("📄 PDF Text Summarization")
     st.write("Upload a PDF file to get a summary.")
@@ -100,6 +94,5 @@ def show_summarizepdf_page():
                 st.write(summary_t5_base)
                 st.markdown("### ✨ Summary (Fine-tuned T5 Model):")
                 st.write(summary_fine_tuned)
-
 if __name__ == "__main__":
     show_summarizepdf_page()
