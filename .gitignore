@@ -8,6 +8,14 @@ __pycache__/
 # Log-Dateien
 *.log
 
+# Ausschließen spezifischer Verzeichnisse und Dateien
+fine-tuned_model/data/
+fine-tuned_model/results/
+fine-tuned_model/t5_base/
+streamlit_models/
+
+pre-trained_model/bart_model/
+
 # MacOS spezifische Datei
 .DS_Store
 
