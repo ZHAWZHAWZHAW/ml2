@@ -3,23 +3,18 @@ import requests
 from bs4 import BeautifulSoup
 from transformers import BartTokenizer, BartForConditionalGeneration, T5Tokenizer, T5ForConditionalGeneration
 
-# Pfade zu den lokalen Modellen
-#bart_model_path = "pre-trained_model/bart_model"
-#t5_model_path = "fine-tuned_model/t5_base"
-#fine_tuned_model_path = "fine-tuned_model/results/final_model"
-
 # Pfade zu den Modellen
-bart_model_path = "pre-trained_model/bart_model"
-t5_model_path = "fine-tuned_model/t5_base"
-fine_tuned_model_path = "fine-tuned_model/results/final_model"
+bart_model_path = "streamlit_models/bart_model"
+t5_model_path = "streamlit_models/t5_base_model"
+fine_tuned_model_path = "streamlit_models/fine_tuned_model"
 
 # Laden der Modelle und Tokenizer
 bart_tokenizer = BartTokenizer.from_pretrained(bart_model_path)
-bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path)
+bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path, use_safetensors=True)
 t5_base_tokenizer = T5Tokenizer.from_pretrained(t5_model_path)
-t5_base_model = T5ForConditionalGeneration.from_pretrained(t5_model_path)
+t5_base_model = T5ForConditionalGeneration.from_pretrained(t5_model_path, use_safetensors=True)
 fine_tuned_tokenizer = T5Tokenizer.from_pretrained(fine_tuned_model_path)
-fine_tuned_model = T5ForConditionalGeneration.from_pretrained(fine_tuned_model_path)
+fine_tuned_model = T5ForConditionalGeneration.from_pretrained(fine_tuned_model_path, use_safetensors=True)
 
 def fetch_url_content(url):
     try:
