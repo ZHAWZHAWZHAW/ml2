@@ -54,7 +54,7 @@ In the project folder "Test Data," you will find a collection of PDFs and URLs w
 
 Of course, you can also upload your own URLs and PDFs and review the results.
 
-<img width="300" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/5dc6e1dd-c11d-43cb-8d16-cba9af4d70e2">
+<img width="150" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/5dc6e1dd-c11d-43cb-8d16-cba9af4d70e2">
 
 
 ## 📈 Modeling <a name="-4-modeling"></a>
