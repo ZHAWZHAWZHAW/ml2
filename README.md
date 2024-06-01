@@ -124,7 +124,10 @@ By carefully crafting these prompts, I was able to ensure that both the BART and
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
 ### 5.1 Analyses (Model Performance Comparison) <a name="51-analyses"></a>
 
+
 <img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
+
+Results:
 
 <img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
 
