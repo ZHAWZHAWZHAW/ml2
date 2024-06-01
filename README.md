@@ -38,6 +38,8 @@ Of course, you can also generate and train the models yourself by using the code
 
 ⚠️⚠️⚠️
 
+🪜
+
 Step-by-step:
 1. Git clone
 2. Set up Environment:
