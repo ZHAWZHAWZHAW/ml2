@@ -56,7 +56,7 @@ Of course, you can also generate and train the models yourself by using the code
 ### ℹ️ Screenshots of the running Application
 
 <details>
-  <summary>Click to expand screenshots</summary>
+  <summary>Click to see screenshots</summary>
   
   <table>
     <tr>
