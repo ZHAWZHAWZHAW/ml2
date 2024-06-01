@@ -216,4 +216,8 @@ The Fine-tuned T5 Model not only generates higher quality summaries as evidenced
 
 
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
-T5
+Despite the promising results achieved with the Fine-tuned T5 Model, there are several limitations that need to be addressed. First, the fine-tuning process was conducted on a subset of the XSum dataset, which may limit the generalizability of the model to other types of texts or domains. Additionally, the evaluation was based solely on the ROUGE metric, which, while informative, does not capture all aspects of summary quality, such as coherence, readability, and factual accuracy.
+
+Future work could involve expanding the training dataset to include a wider variety of texts and domains, as well as incorporating additional evaluation metrics to provide a more comprehensive assessment of summary quality. Furthermore, human evaluation could be employed to better gauge the readability and relevance of the generated summaries. Exploring other advanced summarization models and techniques could also lead to further improvements in performance.
+
+By addressing these limitations and exploring new avenues for enhancement, we can continue to improve the effectiveness and applicability of the news summarization tool, making it an even more valuable resource for users.
