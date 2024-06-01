@@ -17,5 +17,7 @@ streamlit_models/
 
 pre-trained_model/bart_model/
 
+Test Data/Test-PDFs
+
 # MacOS spezifische Datei
 .DS_Store
