@@ -1,17 +1,17 @@
 # 📰 News Summarizer for PDFs and URLs
 ## Project Overview:
-1. [Project Goal & Motivation](#project-goal--motivation)
+. [🏁 Project Goal & Motivation](#project-goal--motivation)
    1.1 [Motivation](#motivation)
    1.2 [Relevance](#relevance)
-2. [Set-up the Project](#set-up-the-project)
-3. [Data](#data)
+2. [🔧 Set-up the Project](#set-up-the-project)
+3. [📊 Data](#data)
    3.1 [Data for Training the Model](#data-for-training-the-model)
    3.2 [Data for Testing the Application](#data-for-testing-the-application)
-4. [Modeling](#modeling)
+4. [📈 Modeling](#modeling)
    4.1 [BART Model](#bart-model)
    4.2 [T5 Model](#t5-model)
    4.3 [Fine-tuned T5 Model](#fine-tuned-t5-model)
-5. [Interpretation and Validation](#interpretation-and-validation)
+5. [✅ Interpretation and Validation](#interpretation-and-validation)
    5.1 [Analyses](#analyses)
    5.2 [Limitation & Next Steps](#limitation--next-steps)
 
