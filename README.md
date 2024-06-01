@@ -28,11 +28,11 @@ This project is highly relevant as it addresses a common pain point experienced 
 
 ## 🔧 Set-up the Project <a name="-2-set-up-the-project"></a>
 1. Git clone
-2. Env setzen:
+2. Set up Environment:
 	1. python3 -m venv venv
 	2. source venv/bin/activate 
 	3. pip install -r requirements.txt
-3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit-App startet)
+3. Streamlit run streamlit_app.py (it takes a few minutes to get the models from the Google Drive)
    The code downloads the created models from Google Drive so that you can test the application even if you cannot run the models locally. The models will be downloaded to the 'streamlit-models' folder.	
 
    Download:
