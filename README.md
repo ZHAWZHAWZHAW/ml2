@@ -1,34 +1,32 @@
 # 📰 News Summarizer for PDFs and URLs
-## Project Overview:
-1. [🏁 Project Goal & Motivation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-1-project-goal--motivation)
-   - [1.1 Motivation](#11-motivation)
-   - [1.2 Relevance](#12-relevance)
-2. [🔧 Set-up the Project](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-2-set-up-the-project)
-3. [📊 Data](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-3-data)
-   - [3.1 Data for Training the Model](#31-data-for-training-the-model)
-   - [3.2 Data for Testing the Application](#32-data-for-testing-the-application)
-4. [📈 Modeling](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-4-modeling)
-   - [4.1 BART Model](#41-bart-model)
-   - [4.2 T5 Model](#42-t5-model)
-   - [4.3 Fine-tuned T5 Model](#43-fine-tuned-t5-model)
-5. [✅ Interpretation and Validation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-5-interpretation-and-validation)
-   - [5.1 Analyses](#51-analyses)
-   - [5.2 Limitation & Next Steps](#52-limitation--next-steps)
 
-## 🏁 1) Project Goal & Motivation
+## Table of Contents
+1. [Project Goal & Motivation](#project-goal--motivation)
+   1.1 [Motivation](#motivation)
+   1.2 [Relevance](#relevance)
+2. [Set-up the Project](#set-up-the-project)
+3. [Data](#data)
+   3.1 [Data for Training the Model](#data-for-training-the-model)
+   3.2 [Data for Testing the Application](#data-for-testing-the-application)
+4. [Modeling](#modeling)
+   4.1 [BART Model](#bart-model)
+   4.2 [T5 Model](#t5-model)
+   4.3 [Fine-tuned T5 Model](#fine-tuned-t5-model)
+5. [Interpretation and Validation](#interpretation-and-validation)
+   5.1 [Analyses](#analyses)
+   5.2 [Limitation & Next Steps](#limitation--next-steps)
 
+## Project Goal & Motivation <a name="project-goal--motivation"></a>
 In an era where information overload is a significant challenge, individuals and professionals alike struggle to keep up with the vast amounts of news published daily. The problem is not the lack of information but rather the overwhelming abundance of it, making it difficult to stay informed efficiently. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
 
-### Motivation
-
+### 1.1 Motivation <a name="motivation"></a>
 The motivation behind this project stems from the need for an efficient way to digest news. In today’s fast-paced world, people need to stay updated without spending excessive time reading through long articles. Whether it's a busy professional who needs to catch up on the latest industry news, a student researching current events, or a casual reader wanting to stay informed, everyone benefits from concise, accurate summaries.
 
-### Relevance
-
+### 1.2 Relevance <a name="relevance"></a>
 This project is highly relevant as it addresses a common pain point experienced by many in the digital age. By leveraging advanced Natural Language Processing (NLP) techniques, this news summarizer can distill essential information from lengthy articles, providing users with quick and comprehensive insights. This not only saves time but also ensures that users stay informed about important topics without the burden of sifting through redundant information.
 
-## 🔧 2) Set-up the project
-	1. Git clone
+## Set-up the Project <a name="set-up-the-project"></a>
+1. Git clone
 	2. Env setzen:
 		1. python3 -m venv venv
 		2. source venv/bin/activate 
@@ -36,8 +34,9 @@ This project is highly relevant as it addresses a common pain point experienced 
   	3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
    <img width="956" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
 
-## 📊 3) Data
-### Data for training the model
+## 📊
+## Data <a name="data"></a>
+### 3.1 Data for Training the Model <a name="data-for-training-the-model"></a>
 The XSum (Extreme Summarization) dataset was chosen for training the T5 model due to its suitability for generating concise and informative summaries. The XSum dataset contains a wide range of articles from the British Broadcasting Corporation (BBC) and is designed specifically for the task of abstractive summarization. Each article in the dataset is paired with a one-sentence summary, making it an ideal choice for training models aimed at creating brief and accurate news summaries.
 
 Here are some key reasons for selecting the XSum dataset:
@@ -49,20 +48,20 @@ Here are some key reasons for selecting the XSum dataset:
 
 By using the XSum dataset, the trained T5 model can effectively learn to generate high-quality summaries that capture the essence of news articles, thereby meeting the needs of users who require quick and comprehensive insights.
 
-### Data for testing the application
+### 3.2 Data for Testing the Application <a name="data-for-testing-the-application"></a>
 In the project folder "Test Data," you will find a collection of PDFs and URLs with which you can test my application. Based on this data, I have also conducted the interpretation and validation in the final section.
 
 Of course, you can also upload your own URLs and PDFs and review the results.
 
-## 📈 4) Modeling
-
-### BART model
+## 📈
+## Modeling <a name="modeling"></a>
+### 4.1 BART Model <a name="bart-model"></a>
 BART (Bidirectional and Auto-Regressive Transformers) is a sequence-to-sequence model designed for natural language generation tasks. Developed by Facebook AI, BART combines the benefits of bidirectional and autoregressive transformers, making it highly effective for tasks like text summarization, translation, and text generation. BART is particularly strong in tasks that require understanding and generating human-like text because it leverages a denoising autoencoder approach during training, which helps the model learn robust representations of text.
 
-### T5 model
+### 4.2 T5 Model <a name="t5-model"></a>
 T5 (Text-To-Text Transfer Transformer) is a versatile model developed by Google Research that treats all NLP tasks as a text-to-text problem, allowing for a unified approach to various tasks like translation, summarization, and classification. The T5 base model, a specific variant within the T5 family, is pre-trained on a large corpus using a fill-in-the-blank objective and can be fine-tuned for specific tasks. This model's flexibility and effectiveness stem from its ability to convert every problem into a text generation task, making it highly adaptable and powerful for numerous applications.
 
-### Fine-tuned t5 model
+### 4.3 Fine-tuned T5 Model <a name="fine-tuned-t5-model"></a>
 To enhance the performance of the T5 model for summarizing news articles, I fine-tuned it using a subset of the XSum dataset. 
 1. The process began with initializing the T5 model and tokenizer from the pre-trained "t5-base" model.
 2. Next, I defined a tokenization function to preprocess the input data, ensuring consistency by formatting both the documents and their summaries. I loaded a subset of 1000 training examples and 500 validation examples from the XSum dataset, chosen for its diverse and concise human-written summaries.
@@ -72,19 +71,8 @@ To enhance the performance of the T5 model for summarizing news articles, I fine
 
 By fine-tuning the T5 model with the XSum dataset, I improved its ability to generate concise and accurate summaries, addressing information overload and making it a valuable tool for efficient news consumption.
 
-### Prompt Engineering
+### 4.4 Prompt Engineering <a name="Prompt Engineering"></a>
 In my news summarizer application, prompt engineering is a key technique used to enhance the performance of both the BART and T5 models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
-
-#### Summarizing Text from PDFs
-
-For the PDF summarization component, I started by loading pre-trained BART, T5 base, and fine-tuned T5 models along with their respective tokenizers. Using PyMuPDF (fitz), I extracted text content from the uploaded PDFs.
-
-To generate summaries, I crafted detailed prompts that explicitly instructed the models to summarize the text. For example:
-- For BART: `"Summarize the following text in detail: {text}"`
-- For T5 Base: `"Summarize the following text in detail: {text}"`
-- For the Fine-tuned T5 Model: `"Summarize the following text in detail: {text}"`
-
-This prompt structure ensures that the models understand the task and produce coherent and concise summaries.
 
 #### Summarizing Text from URLs
 
@@ -109,7 +97,10 @@ def summarize_text_with_t5_base(text):
 ```
 By carefully crafting these prompts, I was able to ensure that both the BART and T5 models could effectively summarize text from various sources. This use of prompt engineering is crucial in guiding the models to generate high-quality, concise, and informative summaries, making the news summarizer a valuable tool for users seeking quick insights from extensive content.
 
-## ✅ 5) Interpretation and Validation
-### Analyses
+## ✅
+## Interpretation and Validation <a name="interpretation-and-validation"></a>
+### 5.1 Analyses <a name="analyses"></a>
+(Details about analyses...)
 
-### Limitation & Next steps
+### 5.2 Limitation & Next Steps <a name="limitation--next-steps"></a>
+(Information about limitations and future steps...)
