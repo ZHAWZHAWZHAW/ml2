@@ -159,6 +159,30 @@ Results:
 - **Latency:** 1.99 seconds per text
 - **Throughput:** 0.503 texts per second
 
+Sure, here is a short explanation of the metrics/scores used to evaluate the models:
+
+### Explanation of Metrics and Scores
+
+##### ROUGE Scores
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used to evaluate the quality of summaries by comparing them to reference summaries (typically human-generated). The main ROUGE metrics used are:
+
+- **ROUGE-1:** Measures the overlap of unigrams (individual words) between the generated summary and the reference summary. It provides an indication of how many words from the reference summary are present in the generated summary.
+- **ROUGE-2:** Measures the overlap of bigrams (pairs of consecutive words) between the generated summary and the reference summary. This metric captures the ability of the summary to retain the sequence of words and hence the coherence of the text.
+- **ROUGE-L:** Measures the longest common subsequence (LCS) between the generated summary and the reference summary. It considers the order of the words and provides a more flexible measure of overlap, considering both precision and recall.
+- **ROUGE-Lsum:** A variant of ROUGE-L specifically designed for summarization tasks, focusing on the longest common subsequence at the summary level.
+
+Higher ROUGE scores indicate that the generated summary has a higher overlap with the reference summary, suggesting better summarization quality.
+
+##### Latency
+- **Latency:** Measures the average time taken by the model to generate a summary for each input text. It is calculated as the total time taken divided by the number of texts processed.
+  - **Lower latency** indicates that the model can generate summaries quickly, making it suitable for real-time or high-throughput applications.
+
+##### Throughput
+- **Throughput:** Measures the number of texts the model can process in a given time period, typically expressed as texts per second. It is calculated as the number of texts processed divided by the total time taken.
+  - **Higher throughput** indicates that the model can handle a large number of texts efficiently in a given time frame, which is important for scalability.
+
+These metrics together provide a comprehensive view of the model's performance, balancing between the quality of the summaries (ROUGE scores) and the efficiency of the model (latency and throughput).
+
 ### Interpretation and Analysis
 The Fine-tuned T5 Model outperforms both the BART and T5 Base models in terms of ROUGE scores, latency, and throughput. It generates more accurate summaries, processes texts faster, and can handle more texts per second. This makes the Fine-tuned T5 Model the most efficient and effective choice for summarizing news articles.
 
