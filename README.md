@@ -154,13 +154,23 @@ By carefully crafting these prompts, I was able to ensure that both the BART and
 
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
 ### 5.1 Analyses (Model Performance Comparison) <a name="51-analyses"></a>
+To validate the performance of the BART, T5 Base, and Fine-tuned T5 models, I followed a systematic approach:
 
+1. Load Models and Tokenizers: Pre-trained BART and T5 Base models, along with the Fine-tuned T5 model, were loaded with their respective tokenizers.
+2. Load Dataset and Metric: A subset of 100 examples from the XSum validation set and the ROUGE metric were loaded for evaluation.
+3. Summarize Texts: Each model generated summaries for the input texts from the dataset. The summaries (hypotheses) and reference summaries were collected.
+4. Evaluate Performance: The ROUGE scores were computed to measure summary quality. Latency (time per text) and throughput (texts per second) were calculated to assess efficiency.
 
-<img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
+This process provided a clear comparison of each model's performance in terms of both quality and speed.
 
-Results:
+<details>
+  <summary>Screenshots</summary>
+  <summary>Run validation.py</summary>
+  <img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
 
-<img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
+  <summary>Results:</summary>
+  <img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
+</details>
 
 
 ### 🧠 Model Performance Comparison
