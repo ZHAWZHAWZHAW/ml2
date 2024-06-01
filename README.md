@@ -1,20 +1,19 @@
 # 📰 News Summarizer for PDFs and URLs
 ## Project Overview:
 1. Project Goal & Motivation
-	1.1 Motivation
-	1.2 Relevance
+1.1 Motivation
+1.2 Relevance
 2. Set-up the project
 3. Data
-	3.1 Data for training the model
-	3.2 Data for testing the application
+3.1 Data for training the model
+3.2 Data for testing the application
 4. Modeling
-	4.1 BART model
-	4.1 T5 model
-	4.2 Fine-tuned T5 model
+4.1 BART model
+4.1 T5 model
+4.2 Fine-tuned T5 model
 5. Interpretation and Validation
-	5.1 Analyses
-	5.2 Limitation & Next steps
-
+5.1 Analyses
+5.2 Limitation & Next steps
 
 ## 🏁 1) Project Goal & Motivation
 
