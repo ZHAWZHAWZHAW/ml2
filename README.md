@@ -57,6 +57,43 @@ To enhance the performance of the T5 model for summarizing news articles, I fine
 By fine-tuning the T5 model with the XSum dataset, I improved its ability to generate concise and accurate summaries, addressing information overload and making it a valuable tool for efficient news consumption.
 
 ### Prompt Engineering
+### Prompt Engineering in the News Summarizer Application
+
+In my news summarizer application, prompt engineering is a key technique used to enhance the performance of both the BART and T5 models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
+
+#### Summarizing Text from PDFs
+
+For the PDF summarization component, I started by loading pre-trained BART, T5 base, and fine-tuned T5 models along with their respective tokenizers. Using PyMuPDF (fitz), I extracted text content from the uploaded PDFs.
+
+To generate summaries, I crafted detailed prompts that explicitly instructed the models to summarize the text. For example:
+- For BART: `"Summarize the following text in detail: {text}"`
+- For T5 Base: `"Summarize the following text in detail: {text}"`
+- For the Fine-tuned T5 Model: `"Summarize the following text in detail: {text}"`
+
+This prompt structure ensures that the models understand the task and produce coherent and concise summaries.
+
+#### Summarizing Text from URLs
+
+The approach for URL summarization is similar. First, I fetched the text content from the given URL using `requests` and `BeautifulSoup`. The same prompt structure was used to guide the models in generating summaries. This consistency helps in maintaining the effectiveness of the summaries across different types of input sources.
+
+Example function for BART:
+```python
+def summarize_text_with_bart(text):
+    prompt = f"Summarize the following text in detail: {text}"
+    inputs = bart_tokenizer(prompt, return_tensors="pt", max_length=1024, truncation=True)
+    summary_ids = bart_model.generate(inputs['input_ids'], max_length=350, min_length=100, num_beams=4, early_stopping=True)
+    return bart_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+```
+
+Example function for T5 Base:
+```python
+def summarize_text_with_t5_base(text):
+    prompt = f"Summarize the following text in detail: {text}"
+    inputs = t5_base_tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
+    summary_ids = t5_base_model.generate(inputs['input_ids'], max_length=128, num_beams=4, early_stopping=True)
+    return t5_base_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+```
+By carefully crafting these prompts, I was able to ensure that both the BART and T5 models could effectively summarize text from various sources. This use of prompt engineering is crucial in guiding the models to generate high-quality, concise, and informative summaries, making the news summarizer a valuable tool for users seeking quick insights from extensive content.
 
 ## ✅ 5) Interpretation and Validation
 ### Analyses
