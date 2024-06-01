@@ -122,15 +122,14 @@ def summarize_text_with_t5_base(text):
 By carefully crafting these prompts, I was able to ensure that both the BART and T5 models could effectively summarize text from various sources. This use of prompt engineering is crucial in guiding the models to generate high-quality, concise, and informative summaries, making the news summarizer a valuable tool for users seeking quick insights from extensive content.
 
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
-### 5.1 Analyses <a nname="51-analyses"></a>
+### 5.1 Analyses (Model Performance Comparison) <a name="51-analyses"></a>
 
 <img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
 
 <img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
 
-## Model Performance Comparison
 
-### BART Model
+#### BART Model
 - **ROUGE Scores:**
   - ROUGE-1: 0.2011
   - ROUGE-2: 0.0380
@@ -139,7 +138,7 @@ By carefully crafting these prompts, I was able to ensure that both the BART and
 - **Latency:** 11.61 seconds per text
 - **Throughput:** 0.086 texts per second
 
-### T5 Base Model
+#### T5 Base Model
 - **ROUGE Scores:**
   - ROUGE-1: 0.1857
   - ROUGE-2: 0.0358
