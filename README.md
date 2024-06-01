@@ -28,11 +28,12 @@ This project is highly relevant as it addresses a common pain point experienced 
 
 ## 🔧 Set-up the Project <a name="-2-set-up-the-project"></a>
 1. Git clone
-	2. Env setzen:
-		1. python3 -m venv venv
-		2. source venv/bin/activate 
-		3. pip install -r requirements.txt
-  	3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
+2. Env setzen:
+	1. python3 -m venv venv
+	2. source venv/bin/activate 
+	3. pip install -r requirements.txt
+3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
+      
    <img width="700" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
 
 ## 📊 Data <a name="-3-data"></a>
