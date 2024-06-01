@@ -1,19 +1,19 @@
 # 📰 News Summarizer for PDFs and URLs
 ## Project Overview:
-1. [🏁 Project Goal & Motivation](#project-goal--motivation)
-   - [1.1 Motivation](#motivation)
-   - [1.2 Relevance](#relevance)
-2. [🔧 Set-up the Project](#set-up-the-project)
-3. [📊 Data](#data)
-   - [3.1 Data for Training the Model](#data-for-training-the-model)
-   - [3.2 Data for Testing the Application](#data-for-testing-the-application)
-4. [📈 Modeling](#modeling)
-   - [4.1 BART Model](#bart-model)
-   - [4.2 T5 Model](#t5-model)
-   - [4.3 Fine-tuned T5 Model](#fine-tuned-t5-model)
-5. [✅ Interpretation and Validation](#interpretation-and-validation)
-   - [5.1 Analyses](#analyses)
-   - [5.2 Limitation & Next Steps](#limitation--next-steps)
+1. [🏁 Project Goal & Motivation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-1-project-goal--motivation)
+   - [1.1 Motivation](#11-motivation)
+   - [1.2 Relevance](#12-relevance)
+2. [🔧 Set-up the Project](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-2-set-up-the-project)
+3. [📊 Data](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-3-data)
+   - [3.1 Data for Training the Model](#31-data-for-training-the-model)
+   - [3.2 Data for Testing the Application](#32-data-for-testing-the-application)
+4. [📈 Modeling](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-4-modeling)
+   - [4.1 BART Model](#41-bart-model)
+   - [4.2 T5 Model](#42-t5-model)
+   - [4.3 Fine-tuned T5 Model](#43-fine-tuned-t5-model)
+5. [✅ Interpretation and Validation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-5-interpretation-and-validation)
+   - [5.1 Analyses](#51-analyses)
+   - [5.2 Limitation & Next Steps](#52-limitation--next-steps)
 
 ## 🏁 1) Project Goal & Motivation
 
