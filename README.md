@@ -132,34 +132,17 @@ Results:
 <img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
 
 
-#### BART Model
-- **ROUGE Scores:**
-  - ROUGE-1: 0.2011
-  - ROUGE-2: 0.0380
-  - ROUGE-L: 0.1338
-  - ROUGE-Lsum: 0.1336
-- **Latency:** 11.61 seconds per text
-- **Throughput:** 0.086 texts per second
+## Model Performance Comparison
 
-#### T5 Base Model
-- **ROUGE Scores:**
-  - ROUGE-1: 0.1857
-  - ROUGE-2: 0.0358
-  - ROUGE-L: 0.1318
-  - ROUGE-Lsum: 0.1316
-- **Latency:** 3.92 seconds per text
-- **Throughput:** 0.255 texts per second
+| Metric       | BART Model        | T5 Base Model    | Fine-tuned T5 Model |
+|--------------|-------------------|------------------|---------------------|
+| **ROUGE-1**  | 0.2011            | 0.1857           | 0.3070              |
+| **ROUGE-2**  | 0.0380            | 0.0358           | 0.0999              |
+| **ROUGE-L**  | 0.1338            | 0.1318           | 0.2363              |
+| **ROUGE-Lsum** | 0.1336          | 0.1316           | 0.2363              |
+| **Latency**  | 11.61 seconds     | 3.92 seconds     | 1.99 seconds        |
+| **Throughput** | 0.086 texts/sec | 0.255 texts/sec  | 0.503 texts/sec     |
 
-### Fine-tuned T5 Model
-- **ROUGE Scores:**
-  - ROUGE-1: 0.3070
-  - ROUGE-2: 0.0999
-  - ROUGE-L: 0.2363
-  - ROUGE-Lsum: 0.2363
-- **Latency:** 1.99 seconds per text
-- **Throughput:** 0.503 texts per second
-
-Sure, here is a short explanation of the metrics/scores used to evaluate the models:
 
 ### Explanation of Metrics and Scores
 
