@@ -57,8 +57,6 @@ To enhance the performance of the T5 model for summarizing news articles, I fine
 By fine-tuning the T5 model with the XSum dataset, I improved its ability to generate concise and accurate summaries, addressing information overload and making it a valuable tool for efficient news consumption.
 
 ### Prompt Engineering
-### Prompt Engineering in the News Summarizer Application
-
 In my news summarizer application, prompt engineering is a key technique used to enhance the performance of both the BART and T5 models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
 
 #### Summarizing Text from PDFs
