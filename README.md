@@ -171,7 +171,7 @@ Results:
 
 
 ### 🔍 Interpretation and Analysis
-#### ROUGE Scores
+#### ⚙️ ROUGE Scores
 
 The Fine-tuned T5 Model outperforms both the BART and T5 Base models across all ROUGE metrics (ROUGE-1, ROUGE-2, ROUGE-L, and ROUGE-Lsum). This indicates that the Fine-tuned T5 Model generates more accurate and relevant summaries compared to the other models.
 
