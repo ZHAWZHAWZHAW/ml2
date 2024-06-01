@@ -244,11 +244,24 @@ In summary, I believe the Fine-tuned T5 Model excels in generating summaries tha
 | ![Fine-tuned T5 Model Summary 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/12d39873-1ae0-4a3e-8929-6655614446f1) | ![Fine-tuned T5 Model Summary 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/49d4002b-f961-40c1-901f-ac3cf1d3b42d) |
 
 
-### 🛠️ Training Analyses
-<img width="1013" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/c831c060-e900-4402-8710-db8fc3f57007">
+### 🛠️ Training Analysis
+The training of the Fine-Tuned T5 Model was conducted over three epochs using a subset of the XSum dataset. Initially, the model started with a loss of 9.6748, which decreased significantly to 1.3579 by the third epoch. This steady reduction in loss indicates effective learning and optimization.
 
-<img width="1015" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/422bd40e-75d8-4eed-af3f-d56f92d779da">
+The evaluation loss was recorded at 1.1472, suggesting reasonable generalization to unseen validation data. Throughout the training, the gradient norms fluctuated as the model adjusted its weights. However, there was a warning regarding missing keys in the checkpoint model, specifically 'embed_tokens.weight' and 'lm_head.weight', which could have slightly impacted performance.
 
+The training speed averaged 3.86 samples per second, which is decent but could be improved for faster training times, especially for larger datasets or more complex models.
+
+In summary, the training of the Fine-Tuned T5 Model was successful, with significant loss reduction and good generalization. Addressing the missing keys warning and optimizing training speed could further enhance performance, making the model a valuable tool for generating high-quality summaries of news articles.
+
+<details>
+  <summary>Training Logs Screenshot 1</summary>
+  <img width="1013" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/c831c060-e900-4402-8710-db8fc3f57007">
+</details>
+
+<details>
+  <summary>Training Logs Screenshot 2</summary>
+  <img width="1015" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/422bd40e-75d8-4eed-af3f-d56f92d779da">
+</details>
 
 ### 🛑 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 Even though the Fine-tuned T5 Model showed good results, there are some limitations. The model was trained on a small part of the XSum dataset, so it might not work as well with different texts or topics. We only used the ROUGE metric for evaluation, which doesn't measure everything like readability or accuracy.
