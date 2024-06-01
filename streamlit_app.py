@@ -61,6 +61,7 @@ from streamlit_pages.summarizepdf_page import show_summarizepdf_page
 from streamlit_pages.model_info_page import show_model_info_page
 from streamlit_pages.home_page import show_home_page
 from streamlit_pages.summarizeurl_page import show_summarizeurl_page
+from streamlit_pages.model_validation_page import show_model_validation_page
 
 st.markdown("""
     <style>
@@ -97,7 +98,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Summarize PDFs", "Summarize URLs", "Model Info"])
+page = st.sidebar.radio("Go to", ["Home", "Summarize PDFs", "Summarize URLs", "Model Info", "Model Validation"])
 if page == "Home":
     show_home_page()
 elif page == "Summarize PDFs":
@@ -106,6 +107,8 @@ elif page == "Summarize URLs":
     show_summarizeurl_page()
 elif page == "Model Info":
     show_model_info_page()
+elif page == "Model Validation":
+    show_model_validation_page()
 
 # Footer
 st.markdown("<hr>", unsafe_allow_html=True)
