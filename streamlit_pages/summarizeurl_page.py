@@ -86,8 +86,6 @@ def summarize_text_with_fine_tuned_model(text):
 
 # Streamlit app for summarizing text from URLs
 ###################################################################################################
-
-# Streamlit app for summarizing text from URLs
 def show_summarizeurl_page():
     st.title("🌐 URL Text Summarization")
     st.write("Enter a URL to get a summary of its content.")

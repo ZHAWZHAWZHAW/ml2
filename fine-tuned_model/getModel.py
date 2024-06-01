@@ -1,16 +1,16 @@
 import os
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
-# Modell und Tokenizer laden
+# Load model and tokenizer
 model_name = "t5-base"
 tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 
-# Sicherstellen, dass der Speichern-Ordner existiert
+# Ensure the save directory exists
 model_save_path = 'fine-tuned_model/t5_base'
 os.makedirs(model_save_path, exist_ok=True)
 
-# Modell und Tokenizer speichern
+# Save model and tokenizer
 model.save_pretrained(model_save_path)
 tokenizer.save_pretrained(model_save_path)
 

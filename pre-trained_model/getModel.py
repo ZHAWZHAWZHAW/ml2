@@ -1,17 +1,17 @@
 from transformers import BartTokenizer, BartForConditionalGeneration
 
 def download_and_save_model(model_name, save_directory):
-    # Tokenizer und Modell laden
+    # Load tokenizer and model
     tokenizer = BartTokenizer.from_pretrained(model_name)
     model = BartForConditionalGeneration.from_pretrained(model_name)
     
-    # Tokenizer und Modell in save_directory speichern
+    # Save tokenizer and model to save_directory
     tokenizer.save_pretrained(save_directory)
     model.save_pretrained(save_directory)
     
-    print(f"Modell und Tokenizer wurden unter {save_directory} gespeichert.")
+    print(f"Model and tokenizer saved to {save_directory}.")
 
 if __name__ == "__main__":
-    model_name = "facebook/bart-large-cnn"  # Das BART-Modell speziell für Zusammenfassungen
-    save_directory = "pre-trained_model/bart_model"  # Pfad anpassen, wo das Modell gespeichert werden soll
+    model_name = "facebook/bart-large-cnn"  # The BART model specifically for summarization
+    save_directory = "pre-trained_model/bart_model"  # Adjust the path where the model should be saved
     download_and_save_model(model_name, save_directory)

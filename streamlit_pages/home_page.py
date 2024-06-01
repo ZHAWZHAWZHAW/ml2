@@ -1,8 +1,8 @@
 import streamlit as st
 
 def show_home_page():
-    st.title("📄 PDF & URL Text Summarization")
-    st.write("Welcome to the Text Summarization App! Use the navigation menu to access different functionalities.")
+    st.title("📄 NewsSnap")
+    st.write("Welcome to the NewsSnap App! Use the navigation menu to access different functionalities.")
     st.markdown("---")
     with st.container():
         st.header("📚 General Information")
