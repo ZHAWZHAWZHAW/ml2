@@ -12,9 +12,11 @@ __pycache__/
 fine-tuned_model/data/
 fine-tuned_model/results/
 fine-tuned_model/t5_base/
+
 streamlit_models/
+
 test data/test-urls.txt
-test-urls.txt
+test data/PDF-Downloads
 
 pre-trained_model/bart_model/
 
