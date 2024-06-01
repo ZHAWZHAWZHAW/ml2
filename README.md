@@ -1,4 +1,4 @@
-# News Summarizer for PDFs and URLs
+# 📰 News Summarizer for PDFs and URLs
 ## 1) Project Goal and Motivation
 
 In an era where information overload is a significant challenge, individuals and professionals alike struggle to keep up with the vast amounts of news published daily. The problem is not the lack of information but rather the overwhelming abundance of it, making it difficult to stay informed efficiently. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
