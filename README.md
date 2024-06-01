@@ -12,7 +12,7 @@
    - [4.1 BART Model](#41-bart-model)
    - [4.2 T5 Model](#42-t5-model)
    - [4.3 Fine-tuned T5 Model](#43-fine-tuned-t5-model)
-   - [4.3 Prompt Engineering](#44-promt-engineering)
+   - [4.4 Prompt Engineering](#44-prompt-engineering)
 5. [✅ Interpretation and Validation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-5-interpretation-and-validation)
    - [5.1 Analyses](#51-analyses)
    - [5.2 Limitation & Next Steps](#52-limitation--next-steps)
