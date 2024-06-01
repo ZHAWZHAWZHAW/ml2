@@ -32,9 +32,15 @@ This project is highly relevant as it addresses a common pain point experienced 
 	1. python3 -m venv venv
 	2. source venv/bin/activate 
 	3. pip install -r requirements.txt
-3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
-      
+3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit-App startet)
+   The code downloads the created models from Google Drive so that you can test the application even if you cannot run the models locally. The models will be downloaded to the 'streamlit-models' folder.	
+
+   Download:
    <img width="700" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
+
+   Folder streamlit-models:
+   <img width="164" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/848fc0d3-a51a-4a0c-bab4-0761342b1513">
+
 
 ## 📊 Data <a name="-3-data"></a>
 ### 3.1 Data for Training the Model <a name="31-data-for-training-the-model"></a>
