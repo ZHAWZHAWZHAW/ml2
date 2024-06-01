@@ -222,9 +222,10 @@ The BART Model, while detailed, included more context and specifics, which might
 
 In summary, the Fine-tuned T5 Model excels in generating summaries that are both comprehensive and concise, making it the preferred choice for applications where quick and clear information retrieval is essential. The BART Model's detailed summaries could be beneficial for users needing more context, whereas the T5 Base Model strikes a balance between brevity and detail but does not perform as well as the fine-tuned variant.
 
-![Fine-tuned T5 Model Summary 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/12d39873-1ae0-4a3e-8929-6655614446f1)
+| Example 1 | Example 2 |
+|-------------------------------|-------------------------------|
+| ![Fine-tuned T5 Model Summary 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/12d39873-1ae0-4a3e-8929-6655614446f1) | ![Fine-tuned T5 Model Summary 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/49d4002b-f961-40c1-901f-ac3cf1d3b42d) |
 
-![Fine-tuned T5 Model Summary 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/49d4002b-f961-40c1-901f-ac3cf1d3b42d)
 
 
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
