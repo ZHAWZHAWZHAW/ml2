@@ -123,12 +123,42 @@ By carefully crafting these prompts, I was able to ensure that both the BART and
 
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
 ### 5.1 Analyses <a nname="51-analyses"></a>
-T5
 
 <img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
 
 <img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
 
+## Model Performance Comparison
+
+### BART Model
+- **ROUGE Scores:**
+  - ROUGE-1: 0.2011
+  - ROUGE-2: 0.0380
+  - ROUGE-L: 0.1338
+  - ROUGE-Lsum: 0.1336
+- **Latency:** 11.61 seconds per text
+- **Throughput:** 0.086 texts per second
+
+### T5 Base Model
+- **ROUGE Scores:**
+  - ROUGE-1: 0.1857
+  - ROUGE-2: 0.0358
+  - ROUGE-L: 0.1318
+  - ROUGE-Lsum: 0.1316
+- **Latency:** 3.92 seconds per text
+- **Throughput:** 0.255 texts per second
+
+### Fine-tuned T5 Model
+- **ROUGE Scores:**
+  - ROUGE-1: 0.3070
+  - ROUGE-2: 0.0999
+  - ROUGE-L: 0.2363
+  - ROUGE-Lsum: 0.2363
+- **Latency:** 1.99 seconds per text
+- **Throughput:** 0.503 texts per second
+
+### Interpretation and Analysis
+The Fine-tuned T5 Model outperforms both the BART and T5 Base models in terms of ROUGE scores, latency, and throughput. It generates more accurate summaries, processes texts faster, and can handle more texts per second. This makes the Fine-tuned T5 Model the most efficient and effective choice for summarizing news articles.
 
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 T5
