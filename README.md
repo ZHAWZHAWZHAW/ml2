@@ -257,9 +257,6 @@ In summary, the training of the Fine-Tuned T5 Model was successful, with signifi
   <summary>Training Logs Screenshot</summary>
   <summary>Screenshot 1</summary>
   <img width="1013" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/c831c060-e900-4402-8710-db8fc3f57007">
-</details>
-
-<details>
   <summary>Screenshot 2</summary>
   <img width="1015" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/422bd40e-75d8-4eed-af3f-d56f92d779da">
 </details>
