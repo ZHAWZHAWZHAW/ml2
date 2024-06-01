@@ -127,5 +127,8 @@ T5
 
 <img width="845" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3c581ece-f888-4bc3-b707-dba5088abb68">
 
+<img width="932" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/72a237a7-1493-45f8-b42d-445f306432a3">
+
+
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 T5
