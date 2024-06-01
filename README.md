@@ -125,5 +125,8 @@ By carefully crafting these prompts, I was able to ensure that both the BART and
 ### 5.1 Analyses <a nname="51-analyses"></a>
 T5
 
+<img width="848" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/54fcd31c-886e-4440-add8-1a6ddf90876b">
+
+
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 T5
