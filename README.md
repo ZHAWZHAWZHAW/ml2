@@ -247,6 +247,9 @@ In summary, I believe the Fine-tuned T5 Model excels in generating summaries tha
 ### 🛠️ Training Analyses
 <img width="1013" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/c831c060-e900-4402-8710-db8fc3f57007">
 
+<img width="1015" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/422bd40e-75d8-4eed-af3f-d56f92d779da">
+
+
 ### 🛑 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 Even though the Fine-tuned T5 Model showed good results, there are some limitations. The model was trained on a small part of the XSum dataset, so it might not work as well with different texts or topics. We only used the ROUGE metric for evaluation, which doesn't measure everything like readability or accuracy.
 
