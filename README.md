@@ -21,13 +21,13 @@
    - [5.4 Limitation & Next Steps](#54-limitation--next-steps)
 
 ## 🏁 Project Goal & Motivation <a name="-1-project-goal--motivation"></a>
-In an era where information overload is a significant challenge. The issue isn't that there's too little information, but rather too much of it, making it hard to stay well-informed. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
+This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately. The issue isn't that there's too little information, but rather too much of it, making it hard to stay well-informed. 
 
 ### 1.1 Motivation <a name="11-motivation"></a>
-The reason for this project is to make it easier to keep up with the news. In today's busy world, people need to stay informed without spending too much time reading long articles. Whether you're a busy professional, a student, or just someone who wants to stay updated, everyone can benefit from quick and accurate summaries.
+The reason for this project is to make it easier to keep up with the news. In today's busy world, people need to stay informed without spending too much time reading long articles. Whether you're a busy professional, a student or just someone who wants to stay updated, everyone can benefit from quick and accurate summaries.
 
 ### 1.2 Relevance <a name="12-relevance"></a>
-This project is really useful because it tackles a common problem people face today: information overload. By using advanced Natural Language Processing (NLP) techniques, this news summarizer can pull out the key information from long articles, giving users quick and clear summaries. This helps save time and makes sure people stay informed about important topics without having to read through a lot of unnecessary details.
+This project is really useful because it tackles a common problem people face today: information overload. By using advanced Natural Language Processing (NLP) techniques, this news summarizer can pull out the key information from long articles, giving users quick and clear summaries. This helps to save time and makes sure people stay informed about important topics without having to read through a lot of unnecessary details.
 
 ## 🔧 Set-up the Project <a name="-2-set-up-the-project"></a>
 
@@ -48,11 +48,13 @@ Of course, you can also generate and train the models yourself by using the code
 
 
 
-Link to the Google Drive: https://drive.google.com/drive/folders/1eKp7-epSM1sTqh1SuVeMMdkz19c8k364?usp=sharing
+Just for your information, here's the link to the Google Drive: 
+https://drive.google.com/drive/folders/1eKp7-epSM1sTqh1SuVeMMdkz19c8k364?usp=sharing
+
+(You don't have to do anything in Google Drive)
 
 
-
-   The code downloads the created models from Google Drive so that you can test the application even if you cannot run the models locally. The models will be downloaded to the 'streamlit-models' folder.	
+   As mentioned already: The code downloads the created models from Google Drive so that you can test the application even if you cannot run the models locally. The models will be downloaded to the 'streamlit-models' folder.	
 
    Download:
    
@@ -106,7 +108,7 @@ Here are some key reasons for selecting the XSum dataset:
 By using the XSum dataset, the trained T5 model can effectively learn to generate high-quality summaries that capture the essence of news articles, thereby meeting the needs of users who require quick and comprehensive insights.
 
 ### 3.2 Data for Testing the Application <a name="32-data-for-testing-the-application"></a>
-In the project folder "Test Data," you will find a collection of PDFs and URLs with which you can test my application. Based on this data, I have also conducted the interpretation and validation in the final section.
+In the project folder "Test Data," you will find a collection of PDFs and URLs with which you can test my application.
 
 Of course, you can also upload your own URLs and PDFs and review the results.
 
@@ -117,12 +119,12 @@ Of course, you can also upload your own URLs and PDFs and review the results.
 In this project, I used the BART model and the T5 Base model in their pre-trained forms without making any further modifications. These models were directly loaded from their respective repositories and used for text summarization. Additionally, I fine-tuned the T5 model to further optimize its performance for my specific use cases. By fine-tuning the T5 model, I was able to significantly improve the quality of the generated summaries.
 
 ### 4.1 BART Model <a name="41-bart-model"></a>
-BART (Bidirectional and Auto-Regressive Transformers) is a sequence-to-sequence model designed for natural language generation tasks. Developed by Facebook AI, BART combines the benefits of bidirectional and autoregressive transformers, making it highly effective for tasks like text summarization, translation, and text generation. BART is particularly strong in tasks that require understanding and generating human-like text because it leverages a denoising autoencoder approach during training, which helps the model learn robust representations of text.
+BART (Bidirectional and Auto-Regressive Transformers) is a sequence-to-sequence model designed for natural language generation tasks. Developed by Facebook AI, BART combines the benefits of bidirectional and autoregressive transformers, making it highly effective for tasks like text summarization, translation and text generation. BART is particularly strong in tasks that require understanding human-like text because it leverages a denoising autoencoder approach during training, which helps the model learn robust representations of text.
 
 <img width="311" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/9d9f30db-125a-49df-ae51-37ebdf5b9fef">
 
 ### 4.2 T5 Model <a name="42-t5-model"></a>
-T5 (Text-To-Text Transfer Transformer) is a versatile model developed by Google Research that treats all NLP tasks as a text-to-text problem, allowing for a unified approach to various tasks like translation, summarization, and classification. The T5 base model, a specific variant within the T5 family, is pre-trained on a large corpus using a fill-in-the-blank objective and can be fine-tuned for specific tasks. This model's flexibility and effectiveness stem from its ability to convert every problem into a text generation task, making it highly adaptable and powerful for numerous applications.
+T5 (Text-To-Text Transfer Transformer) is a versatile model developed by Google Research that treats all NLP tasks as a text-to-text problem, allowing for a unified approach to various tasks like translation, summarization and classification. This model's flexibility and effectiveness stem from its ability to convert every problem into a text generation task, making it highly adaptable and powerful for numerous applications.
 
 <img width="311" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/cf6732c7-cc86-41ee-ab88-982a13b0b858">
 
@@ -130,18 +132,18 @@ T5 (Text-To-Text Transfer Transformer) is a versatile model developed by Google 
 To enhance the performance of the T5 model for summarizing news articles, I fine-tuned it using a subset of the XSum dataset. 
 1. The process began with initializing the T5 model and tokenizer from the pre-trained "t5-base" model.
 2. Next, I defined a tokenization function to preprocess the input data, ensuring consistency by formatting both the documents and their summaries. I loaded a subset of 1000 training examples and 500 validation examples from the XSum dataset, chosen for its diverse and concise human-written summaries.
-3. I applied the tokenization function to both the training and validation datasets, transforming the raw text into tokenized inputs suitable for the T5 model. The training arguments were set to balance training efficiency and model performance, with parameters such as learning rate, batch size, number of epochs, and evaluation strategy.
-4. The Seq2SeqTrainer was initialized with the model, training arguments, datasets, tokenizer, and an early stopping callback to prevent overfitting. This mechanism monitored performance and halted training if no improvement was observed.
-5. The training process, managed by Seq2SeqTrainer, involved handling the training loop, evaluation, and saving the best model based on evaluation loss. Finally, I saved the fine-tuned model and tokenizer for easy deployment and further use.
+3. I applied the tokenization function to both the training and validation datasets, transforming the raw text into tokenized inputs suitable for the T5 model. The training arguments were set to balance training efficiency and model performance, with parameters such as learning rate, batch size, number of epochs and evaluation strategy.
+4. The Seq2SeqTrainer was initialized with the model, training arguments, datasets, tokenizer and an early stopping callback to prevent overfitting. This mechanism monitored performance and halted training if no improvement was observed.
+5. The training process, managed by Seq2SeqTrainer, involved handling the training loop, evaluation and saving the best model based on evaluation loss. Finally, I saved the fine-tuned model and tokenizer for easy deployment and further use.
 
 By fine-tuning the T5 model with the XSum dataset, I improved its ability to generate concise and accurate summaries, addressing information overload and making it a valuable tool for efficient news consumption.
 
 ### 4.4 Prompt Engineering <a name="44-prompt-engineering"></a>
-In my news summarizer application, prompt engineering is a key technique used to enhance the performance of the models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
+In my news summarizer application, Prompt Engineering is a key technique used to enhance the performance of the models for summarizing text from PDFs and URLs. My Prompt Engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
 
-#### Summarizing Text from URLs
+#### Example of Summarizing Text from URLs
 
-The approach for URL summarization is similar. First, I fetched the text content from the given URL using `requests` and `BeautifulSoup`. The same prompt structure was used to guide the models in generating summaries. This consistency helps in maintaining the effectiveness of the summaries across different types of input sources.
+First, I fetched the text content from the given URL using `requests` and `BeautifulSoup`. The same prompt structure was used to guide the models in generating summaries. This consistency helps in maintaining the effectiveness of the summaries across different types of input sources.
 
 Example function for BART:
 ```python
@@ -151,27 +153,18 @@ def summarize_text_with_bart(text):
     summary_ids = bart_model.generate(inputs['input_ids'], max_length=350, min_length=100, num_beams=4, early_stopping=True)
     return bart_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 ```
-
-Example function for T5 Base:
-```python
-def summarize_text_with_t5_base(text):
-    prompt = f"Summarize the following text in detail: {text}"
-    inputs = t5_base_tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
-    summary_ids = t5_base_model.generate(inputs['input_ids'], max_length=128, num_beams=4, early_stopping=True)
-    return t5_base_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-```
-By carefully crafting these prompts, I was able to ensure that three models effectively summarize text from various sources. Using prompt engineering is key to helping the models create clear and informative summaries. This makes the news summarizer a handy tool for users who need quick insights from a lot of content.
+By carefully crafting these prompts, I was able to ensure that the three models effectively summarize text from various sources. Using Prompt Engineering is key to helping the models create clear and informative summaries.
 
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
 ### 5.1 Analysis <a name="51-analysis"></a>
-To validate the performance of the BART, T5 Base, and Fine-tuned T5 models, I followed a systematic approach:
+To validate the performance of the BART, T5 Base and Fine-tuned T5 models, I followed a systematic approach:
 
 1. Load Models and Tokenizers: Pre-trained BART and T5 Base models, along with the Fine-tuned T5 model, were loaded with their respective tokenizers.
 2. Load Dataset and Metric: A subset of 100 examples from the XSum validation set and the ROUGE metric were loaded for evaluation.
 3. Summarize Texts: Each model generated summaries for the input texts from the dataset. The summaries (hypotheses) and reference summaries were collected.
 4. Evaluate Performance: The ROUGE scores were computed to measure summary quality. Latency (time per text) and throughput (texts per second) were calculated to assess efficiency.
 
-This process provided a clear comparison of each model's performance in terms of both quality and speed.
+This process provided a clear comparison of each model's performance in terms of both quality and speed. You can find the validation.py script in the project folder "Model Validations".
 
 <details>
   <summary>Screenshots</summary>
@@ -219,7 +212,7 @@ This process provided a clear comparison of each model's performance in terms of
 ### 🔍 Interpretation and Analysis
 #### ⚙️ ROUGE Scores
 
-The Fine-tuned T5 Model outperforms both the BART and T5 Base models across all ROUGE metrics (ROUGE-1, ROUGE-2, ROUGE-L, and ROUGE-Lsum). This indicates that the Fine-tuned T5 Model generates more accurate and relevant summaries compared to the other models.
+The Fine-tuned T5 Model outperforms both the BART and T5 Base models across all ROUGE metrics. This indicates that the Fine-tuned T5 Model generates more accurate and relevant summaries compared to the other models.
 
 #### ⚙️ Latency
 
@@ -234,7 +227,7 @@ The Fine-tuned T5 Model has the highest throughput at 0.503 texts per second, me
 The Fine-tuned T5 Model not only generates higher quality summaries as evidenced by the higher ROUGE scores but also processes texts more efficiently with lower latency and higher throughput. This makes it the best-performing model among the three for the task of summarizing news articles.
 
 ### 5.2 📌 Personal reflection <a name="52-personal-reflection"></a>
-I found that the summaries generated by the Fine-tuned T5 Model are concise and capture the essential details of the original texts effectively. In both cases, it provided clear and direct summaries, showcasing its ability to understand and distill complex information into digestible summaries.
+I found that the summaries generated by the Fine-tuned T5 Model are concise and capture the essential details of the original texts effectively. In both underlying cases (see screeenshots below), it provided clear and direct summaries, showcasing its ability to understand and distill complex information into digestible summaries.
 
 The BART Model, while detailed, included more context and specifics, which might be useful in some scenarios but could be considered excessive in others. The T5 Base Model, on the other hand, provided more succinct summaries than BART but did not capture as many details as the Fine-tuned T5 Model.
 
@@ -279,5 +272,7 @@ In summary, the training of the Fine-Tuned T5 Model was successful, with signifi
 Even though the Fine-tuned T5 Model showed good results, there are some limitations. The model was trained on a small part of the XSum dataset, so it might not work as well with different texts or topics. We only used the ROUGE metric for evaluation, which doesn't measure everything like readability or accuracy.
 
 To improve, we could train on a larger, more varied dataset and use more evaluation methods. Getting feedback from people reading the summaries could also help. Trying other advanced summarization models might lead to better performance.
+
+An important point that could be addressed as the next step is improving the grammar of the summaries. For instance, there are often issues with punctuation or capitalization when creating the summaries. Addressing these aspects could certainly further enhance the final result.
 
 By addressing these issues and exploring new options, we can make the news summarization tool even better.
