@@ -29,6 +29,6 @@ This project is highly relevant as it addresses a common pain point experienced 
 ### Prompt Engineering
 
 ## 5) Interpretation and Validation
-### analyses
+### Analyses
 
 ### Limitation & Next steps
