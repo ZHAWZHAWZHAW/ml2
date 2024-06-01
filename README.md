@@ -54,12 +54,19 @@ In the project folder "Test Data," you will find a collection of PDFs and URLs w
 
 Of course, you can also upload your own URLs and PDFs and review the results.
 
+<img width="194" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/9459994d-d669-499a-9402-d10cefbfbdbc">
+
+
 ## 📈 Modeling <a name="-4-modeling"></a>
 ### 4.1 BART Model <a name="41-bart-model"></a>
 BART (Bidirectional and Auto-Regressive Transformers) is a sequence-to-sequence model designed for natural language generation tasks. Developed by Facebook AI, BART combines the benefits of bidirectional and autoregressive transformers, making it highly effective for tasks like text summarization, translation, and text generation. BART is particularly strong in tasks that require understanding and generating human-like text because it leverages a denoising autoencoder approach during training, which helps the model learn robust representations of text.
 
+<img width="311" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/9d9f30db-125a-49df-ae51-37ebdf5b9fef">
+
 ### 4.2 T5 Model <a name="42-t5-model"></a>
 T5 (Text-To-Text Transfer Transformer) is a versatile model developed by Google Research that treats all NLP tasks as a text-to-text problem, allowing for a unified approach to various tasks like translation, summarization, and classification. The T5 base model, a specific variant within the T5 family, is pre-trained on a large corpus using a fill-in-the-blank objective and can be fine-tuned for specific tasks. This model's flexibility and effectiveness stem from its ability to convert every problem into a text generation task, making it highly adaptable and powerful for numerous applications.
+
+<img width="311" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/cf6732c7-cc86-41ee-ab88-982a13b0b858">
 
 ### 4.3 Fine-tuned T5 Model <a name="43-fine-tuned-t5-model"></a>
 To enhance the performance of the T5 model for summarizing news articles, I fine-tuned it using a subset of the XSum dataset. 
