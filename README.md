@@ -143,31 +143,28 @@ Results:
 | **Latency**  | 11.61 seconds     | 3.92 seconds     | 1.99 seconds        |
 | **Throughput** | 0.086 texts/sec | 0.255 texts/sec  | 0.503 texts/sec     |
 
-*Explanation of Metrics and Scores*
+<details>
+  <summary>Explanation of Metrics and Scores</summary>
 
-*⚙️ ROUGE Scores*
+  #### ⚙️ ROUGE Scores
+  ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used to evaluate the quality of summaries by comparing them to reference summaries (typically human-generated). The main ROUGE metrics used are:
+  - **ROUGE-1:** Measures the overlap of unigrams (individual words) between the generated summary and the reference summary. It provides an indication of how many words from the reference summary are present in the generated summary.
+  - **ROUGE-2:** Measures the overlap of bigrams (pairs of consecutive words) between the generated summary and the reference summary. This metric captures the ability of the summary to retain the sequence of words and hence the coherence of the text.
+  - **ROUGE-L:** Measures the longest common subsequence (LCS) between the generated summary and the reference summary. It considers the order of the words and provides a more flexible measure of overlap, considering both precision and recall.
+  - **ROUGE-Lsum:** A variant of ROUGE-L specifically designed for summarization tasks, focusing on the longest common subsequence at the summary level.
 
-*ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used to evaluate the quality of summaries by comparing them to reference summaries (typically human-generated). The main ROUGE metrics used are:*
+  Higher ROUGE scores indicate that the generated summary has a higher overlap with the reference summary, suggesting better summarization quality.
 
-* - **ROUGE-1:** Measures the overlap of unigrams (individual words) between the generated summary and the reference summary. It provides an indication of how many words from the reference summary are present in the generated summary.
-* - **ROUGE-2:** Measures the overlap of bigrams (pairs of consecutive words) between the generated summary and the reference summary. This metric captures the ability of the summary to retain the sequence of words and hence the coherence of the text.
-* - **ROUGE-L:** Measures the longest common subsequence (LCS) between the generated summary and the reference summary. It considers the order of the words and provides a more flexible measure of overlap, considering both precision and recall.
-* - **ROUGE-Lsum:** A variant of ROUGE-L specifically designed for summarization tasks, focusing on the longest common subsequence at the summary level.*
+  #### ⚙️ Latency
+  - **Latency:** Measures the average time taken by the model to generate a summary for each input text. It is calculated as the total time taken divided by the number of texts processed.
+    - **Lower latency** indicates that the model can generate summaries quickly, making it suitable for real-time or high-throughput applications.
 
-*Higher ROUGE scores indicate that the generated summary has a higher overlap with the reference summary, suggesting better summarization quality.*
+  #### ⚙️ Throughput
+  - **Throughput:** Measures the number of texts the model can process in a given time period, typically expressed as texts per second. It is calculated as the number of texts processed divided by the total time taken.
+    - **Higher throughput** indicates that the model can handle a large number of texts efficiently in a given time frame, which is important for scalability.
 
-*⚙️ Latency*
-
-* - **Latency:** Measures the average time taken by the model to generate a summary for each input text. It is calculated as the total time taken divided by the number of texts processed.*
-*  - **Lower latency** indicates that the model can generate summaries quickly, making it suitable for real-time or high-throughput applications.*
-
-*⚙️ Throughput*
-
-* - **Throughput:** Measures the number of texts the model can process in a given time period, typically expressed as texts per second. It is calculated as the number of texts processed divided by the total time taken.*
-*  - **Higher throughput** indicates that the model can handle a large number of texts efficiently in a given time frame, which is important for scalability.*
-
-*These metrics together provide a comprehensive view of the model's performance, balancing between the quality of the summaries (ROUGE scores) and the efficiency of the model (latency and throughput).*
-
+  These metrics together provide a comprehensive view of the model's performance, balancing between the quality of the summaries (ROUGE scores) and the efficiency of the model (latency and throughput).
+</details>
 
 ### 🔍 Interpretation and Analysis
 #### ⚙️ ROUGE Scores
@@ -185,6 +182,7 @@ The Fine-tuned T5 Model has the highest throughput at 0.503 texts per second, me
 #### ⚙️ Conclusion
 
 The Fine-tuned T5 Model not only generates higher quality summaries as evidenced by the higher ROUGE scores but also processes texts more efficiently with lower latency and higher throughput. This makes it the best-performing model among the three for the task of summarizing news articles.
+
 
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 T5
