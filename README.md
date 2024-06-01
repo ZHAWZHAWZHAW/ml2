@@ -33,7 +33,7 @@ This project is highly relevant as it addresses a common pain point experienced 
 		2. source venv/bin/activate 
 		3. pip install -r requirements.txt
   	3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
-   <img width="956" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
+   <img width="700" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
 
 ## 📊 Data <a name="-3-data"></a>
 ### 3.1 Data for Training the Model <a name="31-data-for-training-the-model"></a>
