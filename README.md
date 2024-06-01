@@ -255,6 +255,18 @@ The training speed averaged 3.86 samples per second, which is decent but could b
 
 In summary, the training of the Fine-Tuned T5 Model was successful, with significant loss reduction and good generalization. Addressing the missing keys warning and optimizing training speed could further enhance performance, making the model a valuable tool for generating high-quality summaries of news articles.
 
+#### Key Training Metrics:
+
+| Metric                | Value       |
+|-----------------------|-------------|
+| Initial Loss          | 9.6748      |
+| Final Loss            | 1.3579      |
+| Evaluation Loss       | 1.1472      |
+| Training Speed        | 3.86 samples/sec |
+| Number of Epochs      | 3           |
+| Final Gradient Norm   | 5.6642      |
+
+
 <details>
   <summary>Training Logs Screenshot</summary>
   <summary>Screenshot 1</summary>
