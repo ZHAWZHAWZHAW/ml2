@@ -15,7 +15,8 @@
    - [4.4 Prompt Engineering](#44-prompt-engineering)
 5. [✅ Interpretation and Validation](https://github.com/ZHAWZHAWZHAW/ml2/blob/master/README.md#-5-interpretation-and-validation)
    - [5.1 Analyses](#51-analyses)
-   - [5.2 Limitation & Next Steps](#52-limitation--next-steps)
+   - [5.3 Training Analyses](#53-training-analyses)
+   - [5.4 Limitation & Next Steps](#54-limitation--next-steps)
 
 ## 🏁 Project Goal & Motivation <a name="-1-project-goal--motivation"></a>
 In an era where information overload is a significant challenge. The issue isn't that there's too little information, but rather too much of it, making it hard to stay well-informed. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
@@ -244,7 +245,7 @@ In summary, I believe the Fine-tuned T5 Model excels in generating summaries tha
 | ![Fine-tuned T5 Model Summary 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/12d39873-1ae0-4a3e-8929-6655614446f1) | ![Fine-tuned T5 Model Summary 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/49d4002b-f961-40c1-901f-ac3cf1d3b42d) |
 
 
-### 🛠️ Training Analysis
+### 🛠️ 5.3 Training Analysis <a name="53-training-analysis"></a>
 The training of the Fine-Tuned T5 Model was conducted over three epochs using a subset of the XSum dataset. Initially, the model started with a loss of 9.6748, which decreased significantly to 1.3579 by the third epoch. This steady reduction in loss indicates effective learning and optimization.
 
 The evaluation loss was recorded at 1.1472, suggesting reasonable generalization to unseen validation data. Throughout the training, the gradient norms fluctuated as the model adjusted its weights. However, there was a warning regarding missing keys in the checkpoint model, specifically 'embed_tokens.weight' and 'lm_head.weight', which could have slightly impacted performance.
@@ -261,7 +262,7 @@ In summary, the training of the Fine-Tuned T5 Model was successful, with signifi
   <img width="1015" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/422bd40e-75d8-4eed-af3f-d56f92d779da">
 </details>
 
-### 🛑 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
+### 🛑 5.4 Limitation & Next Steps <a name="54-limitation--next-steps"></a>
 Even though the Fine-tuned T5 Model showed good results, there are some limitations. The model was trained on a small part of the XSum dataset, so it might not work as well with different texts or topics. We only used the ROUGE metric for evaluation, which doesn't measure everything like readability or accuracy.
 
 To improve, we could train on a larger, more varied dataset and use more evaluation methods. Getting feedback from people reading the summaries could also help. Trying other advanced summarization models might lead to better performance.
