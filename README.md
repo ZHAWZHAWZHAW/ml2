@@ -12,6 +12,14 @@ The motivation behind this project stems from the need for an efficient way to d
 This project is highly relevant as it addresses a common pain point experienced by many in the digital age. By leveraging advanced Natural Language Processing (NLP) techniques, this news summarizer can distill essential information from lengthy articles, providing users with quick and comprehensive insights. This not only saves time but also ensures that users stay informed about important topics without the burden of sifting through redundant information.
 
 ## 🔧 2) Set-up the project
+	1. Git clone
+	2. Env setzen:
+		1. python3 -m venv venv
+		2. source venv/bin/activate 
+		3. pip install -r requirements.txt
+
+Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
+
 
 ## 📊 3) Data
 ### Data for training the Model
