@@ -104,6 +104,8 @@ Of course, you can also upload your own URLs and PDFs and review the results.
 
 
 ## 📈 Modeling <a name="-4-modeling"></a>
+In this project, I used the BART model and the T5 Base model in their pre-trained forms without making any further modifications. These models were directly loaded from their respective repositories and used for text summarization. Additionally, I fine-tuned the T5 model to further optimize its performance for my specific use cases. By fine-tuning the T5 model, I was able to significantly improve the quality of the generated summaries.
+
 ### 4.1 BART Model <a name="41-bart-model"></a>
 BART (Bidirectional and Auto-Regressive Transformers) is a sequence-to-sequence model designed for natural language generation tasks. Developed by Facebook AI, BART combines the benefits of bidirectional and autoregressive transformers, making it highly effective for tasks like text summarization, translation, and text generation. BART is particularly strong in tasks that require understanding and generating human-like text because it leverages a denoising autoencoder approach during training, which helps the model learn robust representations of text.
 
