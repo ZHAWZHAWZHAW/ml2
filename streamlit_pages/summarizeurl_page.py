@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from transformers import BartTokenizer, BartForConditionalGeneration, T5Tokenizer, T5ForConditionalGeneration
 
 ###################################################################################################
-
 # Paths to the models, which were created and trained independently/locally
     # bart_model_path = "pre-trained_model/bart_model"
     # t5_model_path = "fine-tuned_model/t5_base"
@@ -42,92 +41,53 @@ def fetch_url_content(url):
 
 # Prompt-Engineering
 ###################################################################################################
-def summarize_text_with_combined_prompts_bart(text):
-    prompt1 = f"Summarize the following text in detail: {text}"
-    prompt2 = f"Extract and summarize the most important points from the text: {text}"
-    
-    inputs1 = bart_tokenizer(prompt1, return_tensors="pt", max_length=1024, truncation=True)
-    summary_ids1 = bart_model.generate(
-        inputs1['input_ids'],
-        max_length=50,  
-        min_length=25,  
+
+# Function to summarize text with BART
+def summarize_text_with_bart(text):
+    prompt = f"Summarize the following news article in detail: {text}"
+    inputs = bart_tokenizer(prompt, return_tensors="pt", max_length=1024, truncation=True)
+    summary_ids = bart_model.generate(
+        inputs['input_ids'],
+        max_length=350,
+        min_length=100,
         length_penalty=2.0,
         num_beams=4,
         early_stopping=True
     )
-    summary1 = bart_tokenizer.decode(summary_ids1[0], skip_special_tokens=True)
-    
-    inputs2 = bart_tokenizer(prompt2, return_tensors="pt", max_length=1024, truncation=True)
-    summary_ids2 = bart_model.generate(
-        inputs2['input_ids'],
-        max_length=50,  
-        min_length=25, 
-        length_penalty=2.0,
-        num_beams=4,
-        early_stopping=True
-    )
-    summary2 = bart_tokenizer.decode(summary_ids2[0], skip_special_tokens=True)
-    
-    combined_summary = summary1 + " " + summary2
-    return combined_summary
+    summary = bart_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return summary
 
-def summarize_text_with_combined_prompts_t5_base(text):
-    prompt1 = f"Summarize the following text in detail: {text}"
-    prompt2 = f"Extract and summarize the most important points from the text: {text}"
-    
-    inputs1 = t5_base_tokenizer(prompt1, return_tensors="pt", max_length=512, truncation=True)
-    summary_ids1 = t5_base_model.generate(
-        inputs1['input_ids'],
-        max_length=50, 
-        min_length=25, 
+# Function to summarize text with T5 Base
+def summarize_text_with_t5_base(text):
+    prompt = f"Summarize the following news article in detail: {text}"
+    inputs = t5_base_tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
+    summary_ids = t5_base_model.generate(
+        inputs['input_ids'],
+        max_length=128,
         num_beams=4,
         early_stopping=True,
     )
-    summary1 = t5_base_tokenizer.decode(summary_ids1[0], skip_special_tokens=True)
-    
-    inputs2 = t5_base_tokenizer(prompt2, return_tensors="pt", max_length=512, truncation=True)
-    summary_ids2 = t5_base_model.generate(
-        inputs2['input_ids'],
-        max_length=50,
-        min_length=25,
-        num_beams=4,
-        early_stopping=True,
-    )
-    summary2 = t5_base_tokenizer.decode(summary_ids2[0], skip_special_tokens=True)
-    
-    combined_summary = summary1 + " " + summary2
-    return combined_summary
+    summary = t5_base_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return summary
 
-def summarize_text_with_combined_prompts_fine_tuned(text):
-    prompt1 = f"Summarize the following text in detail: {text}"
-    prompt2 = f"Extract and summarize the most important points from the text: {text}"
-    
-    inputs1 = fine_tuned_tokenizer(prompt1, return_tensors="pt", max_length=512, truncation=True)
-    summary_ids1 = fine_tuned_model.generate(
-        inputs1['input_ids'],
-        max_length=50,
-        min_length=25,
+# Function to summarize text with Fine-tuned T5 Model
+def summarize_text_with_fine_tuned_model(text):
+    prompt = f"Summarize the following news article in detail: {text}"
+    inputs = fine_tuned_tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
+    summary_ids = fine_tuned_model.generate(
+        inputs['input_ids'],
+        max_length=128,
         num_beams=4,
         early_stopping=True,
     )
-    summary1 = fine_tuned_tokenizer.decode(summary_ids1[0], skip_special_tokens=True)
-    
-    inputs2 = fine_tuned_tokenizer(prompt2, return_tensors="pt", max_length=512, truncation=True)
-    summary_ids2 = fine_tuned_model.generate(
-        inputs2['input_ids'],
-        max_length=50, 
-        min_length=25,  
-        num_beams=4,
-        early_stopping=True,
-    )
-    summary2 = fine_tuned_tokenizer.decode(summary_ids2[0], skip_special_tokens=True)
-    
-    combined_summary = summary1 + " " + summary2
-    return combined_summary
+    summary = fine_tuned_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return summary
 ###################################################################################################
 
 # Streamlit app for summarizing text from URLs
 ###################################################################################################
+
+# Streamlit app for summarizing text from URLs
 def show_summarizeurl_page():
     st.title("🌐 URL Text Summarization")
     st.write("Enter a URL to get a summary of its content.")
@@ -140,27 +100,27 @@ def show_summarizeurl_page():
         if st.button("Summarize"):
             if model_choice == "BART":
                 with st.spinner('🔄 Generating summary with BART...'):
-                    summary = summarize_text_with_combined_prompts_bart(text)
+                    summary = summarize_text_with_bart(text)
                 st.success("✅ Summary generated successfully with BART!")
                 st.markdown("### ✨ Summary (BART):")
                 st.write(summary)
             elif model_choice == "T5 Base Model":
                 with st.spinner('🔄 Generating summary with T5 Base Model...'):
-                    summary = summarize_text_with_combined_prompts_t5_base(text)
+                    summary = summarize_text_with_t5_base(text)
                 st.success("✅ Summary generated successfully with T5 Base Model!")
                 st.markdown("### ✨ Summary (T5 Base Model):")
                 st.write(summary)
             elif model_choice == "Fine-tuned T5 Model":
                 with st.spinner('🔄 Generating summary with Fine-tuned T5 Model...'):
-                    summary = summarize_text_with_combined_prompts_fine_tuned(text)
+                    summary = summarize_text_with_fine_tuned_model(text)
                 st.success("✅ Summary generated successfully with Fine-tuned T5 Model!")
                 st.markdown("### ✨ Summary (Fine-tuned T5 Model):")
                 st.write(summary)
             elif model_choice == "Use All":
                 with st.spinner('🔄 Generating summaries with all models...'):
-                    summary_bart = summarize_text_with_combined_prompts_bart(text)
-                    summary_t5_base = summarize_text_with_combined_prompts_t5_base(text)
-                    summary_fine_tuned = summarize_text_with_combined_prompts_fine_tuned(text)
+                    summary_bart = summarize_text_with_bart(text)
+                    summary_t5_base = summarize_text_with_t5_base(text)
+                    summary_fine_tuned = summarize_text_with_fine_tuned_model(text)
                 st.success("✅ Summaries generated successfully!")
                 st.markdown("### ✨ Summary (BART):")
                 st.write(summary_bart)
