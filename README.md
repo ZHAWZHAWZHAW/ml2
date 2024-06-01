@@ -13,8 +13,19 @@ This project is highly relevant as it addresses a common pain point experienced 
 
 ## 2) Set-up the project
 
-## 3) Data Collection or Generation
+## 3) Data
+### Data for training the Model
+
+### Data for testing the application
 
 ## 4) Modeling
+### BART model
+
+### T5 model
+
+### Fine-tuned t5 model
+#### Training
+
+### Prompt Engineering
 
 ## 5) Interpretation and Validation
