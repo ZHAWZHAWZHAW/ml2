@@ -167,7 +167,21 @@ Higher ROUGE scores indicate that the generated summary has a higher overlap wit
 These metrics together provide a comprehensive view of the model's performance, balancing between the quality of the summaries (ROUGE scores) and the efficiency of the model (latency and throughput).
 
 ### Interpretation and Analysis
-The Fine-tuned T5 Model outperforms both the BART and T5 Base models in terms of ROUGE scores, latency, and throughput. It generates more accurate summaries, processes texts faster, and can handle more texts per second. This makes the Fine-tuned T5 Model the most efficient and effective choice for summarizing news articles.
+### ROUGE Scores
+
+The Fine-tuned T5 Model outperforms both the BART and T5 Base models across all ROUGE metrics (ROUGE-1, ROUGE-2, ROUGE-L, and ROUGE-Lsum). This indicates that the Fine-tuned T5 Model generates more accurate and relevant summaries compared to the other models.
+
+### Latency
+
+The BART Model has the highest latency, taking about 11.61 seconds per text, which is significantly slower compared to the T5 models. The Fine-tuned T5 Model has the lowest latency at 1.99 seconds per text, indicating that it processes texts faster than the other models.
+
+### Throughput
+
+The Fine-tuned T5 Model has the highest throughput at 0.503 texts per second, meaning it can handle more texts in a given time frame compared to the other models. The BART Model has the lowest throughput at 0.086 texts per second, making it the least efficient in terms of processing speed.
+
+### Conclusion
+
+The Fine-tuned T5 Model not only generates higher quality summaries as evidenced by the higher ROUGE scores but also processes texts more efficiently with lower latency and higher throughput. This makes it the best-performing model among the three for the task of summarizing news articles.
 
 ### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
 T5
