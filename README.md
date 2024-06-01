@@ -57,15 +57,15 @@ Of course, you can also generate and train the models yourself by using the code
 
 | Screenshot                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------------|
-| ![Home Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/99c2cb02-eaf5-41f5-8168-267c659f18fd)          |
-| ![PDF Screen 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3bfb7804-6301-48de-8b77-050067faed54)         |
-| ![PDF Screen 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7003051c-c06f-40ff-93f7-4f9ed6a7e4d2)         |
-| ![PDF Screen 3](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7453ecf2-94d6-4838-8111-891e0db0179a)         |
-| ![PDF Screen 4](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/616f7ac0-6a50-4197-b12a-90c7bfc3b01e)         |
-| ![PDF Screen 5](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/f864e71c-da2d-477c-ab94-a54b2362a581)         |
-| ![URL Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3ffe5d66-b0db-45f9-b836-dd212b74f269)           |
-| ![Model Info Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3e3fdc33-a9ee-45b8-b365-87fe69a6c578)    |
-| ![Model Validation Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/e9b73106-ebe0-4490-87d2-66926d08e56b)  |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/99c2cb02-eaf5-41f5-8168-267c659f18fd" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3bfb7804-6301-48de-8b77-050067faed54" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7003051c-c06f-40ff-93f7-4f9ed6a7e4d2" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7453ecf2-94d6-4838-8111-891e0db0179a" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/616f7ac0-6a50-4197-b12a-90c7bfc3b01e" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/f864e71c-da2d-477c-ab94-a54b2362a581" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3ffe5d66-b0db-45f9-b836-dd212b74f269" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3e3fdc33-a9ee-45b8-b365-87fe69a6c578" width="400"/> |
+| <img src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/e9b73106-ebe0-4490-87d2-66926d08e56b" width="400"/> |
 
 
 ## 📊 Data <a name="-3-data"></a>
