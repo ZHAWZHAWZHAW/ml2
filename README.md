@@ -1,8 +1,5 @@
 # 📰 News Summarizer for PDFs and URLs
 ## Project Overview:
-# Project Title
-
-## Table of Contents
 1. [🏁 Project Goal & Motivation](#project-goal--motivation)
    - [1.1 Motivation](#motivation)
    - [1.2 Relevance](#relevance)
