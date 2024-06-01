@@ -18,18 +18,18 @@
    - [5.2 Limitation & Next Steps](#52-limitation--next-steps)
 
 ## 🏁 Project Goal & Motivation <a name="-1-project-goal--motivation"></a>
-In an era where information overload is a significant challenge, individuals and professionals alike struggle to keep up with the vast amounts of news published daily. The problem is not the lack of information but rather the overwhelming abundance of it, making it difficult to stay informed efficiently. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
+In an era where information overload is a significant challenge. The issue isn't that there's too little information, but rather too much of it, making it hard to stay well-informed. This project aims to solve the problem of information overload by providing a tool that can summarize news articles from PDFs and URLs quickly and accurately.
 
 ### 1.1 Motivation <a name="11-motivation"></a>
-The motivation behind this project stems from the need for an efficient way to digest news. In today’s fast-paced world, people need to stay updated without spending excessive time reading through long articles. Whether it's a busy professional who needs to catch up on the latest industry news, a student researching current events, or a casual reader wanting to stay informed, everyone benefits from concise, accurate summaries.
+The reason for this project is to make it easier to keep up with the news. In today's busy world, people need to stay informed without spending too much time reading long articles. Whether you're a busy professional, a student, or just someone who wants to stay updated, everyone can benefit from quick and accurate summaries.
 
 ### 1.2 Relevance <a name="12-relevance"></a>
-This project is highly relevant as it addresses a common pain point experienced by many in the digital age. By leveraging advanced Natural Language Processing (NLP) techniques, this news summarizer can distill essential information from lengthy articles, providing users with quick and comprehensive insights. This not only saves time but also ensures that users stay informed about important topics without the burden of sifting through redundant information.
+This project is really useful because it tackles a common problem people face today: information overload. By using advanced Natural Language Processing (NLP) techniques, this news summarizer can pull out the key information from long articles, giving users quick and clear summaries. This helps save time and makes sure people stay informed about important topics without having to read through a lot of unnecessary details.
 
 ## 🔧 Set-up the Project <a name="-2-set-up-the-project"></a>
 
 ### ⚠️⚠️⚠️ Important Information:
-I have saved the three models used in Google Drive. As soon as you start the Streamlit app (command: streamlit run streamlit_app.py), the application will download the three models and load them into the "streamlit_models" folder. The Streamlit app will then start and use the newly downloaded models.
+I've saved the three models used in Google Drive. As soon as you start the Streamlit app (command: streamlit run streamlit_app.py), the application will download the three models and load them into the "streamlit_models" folder. The Streamlit app will then start and use the newly downloaded models.
 
 -> So, you only need to start the Streamlit app to get the three models and have the application running.
 
@@ -42,6 +42,13 @@ Of course, you can also generate and train the models yourself by using the code
 	2. source venv/bin/activate 
 	3. pip install -r requirements.txt
 3. Streamlit run streamlit_app.py (it takes a few minutes to get the models from the Google Drive)
+
+
+
+Link to the Google Drive: https://drive.google.com/drive/folders/1eKp7-epSM1sTqh1SuVeMMdkz19c8k364?usp=sharing
+
+
+
    The code downloads the created models from Google Drive so that you can test the application even if you cannot run the models locally. The models will be downloaded to the 'streamlit-models' folder.	
 
    Download:
@@ -127,7 +134,7 @@ To enhance the performance of the T5 model for summarizing news articles, I fine
 By fine-tuning the T5 model with the XSum dataset, I improved its ability to generate concise and accurate summaries, addressing information overload and making it a valuable tool for efficient news consumption.
 
 ### 4.4 Prompt Engineering <a name="44-prompt-engineering"></a>
-In my news summarizer application, prompt engineering is a key technique used to enhance the performance of both the BART and T5 models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
+In my news summarizer application, prompt engineering is a key technique used to enhance the performance of the models for summarizing text from PDFs and URLs. Prompt engineering involves designing specific prompts that guide the models to generate high-quality summaries effectively.
 
 #### Summarizing Text from URLs
 
@@ -150,7 +157,7 @@ def summarize_text_with_t5_base(text):
     summary_ids = t5_base_model.generate(inputs['input_ids'], max_length=128, num_beams=4, early_stopping=True)
     return t5_base_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 ```
-By carefully crafting these prompts, I was able to ensure that both the BART and T5 models could effectively summarize text from various sources. This use of prompt engineering is crucial in guiding the models to generate high-quality, concise, and informative summaries, making the news summarizer a valuable tool for users seeking quick insights from extensive content.
+By carefully crafting these prompts, I was able to ensure that three models effectively summarize text from various sources. Using prompt engineering is key to helping the models create clear and informative summaries. This makes the news summarizer a handy tool for users who need quick insights from a lot of content.
 
 ## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
 ### 5.1 Analyses (Model Performance Comparison) <a name="51-analyses"></a>
