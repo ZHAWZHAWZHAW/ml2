@@ -17,9 +17,8 @@ This project is highly relevant as it addresses a common pain point experienced 
 		1. python3 -m venv venv
 		2. source venv/bin/activate 
 		3. pip install -r requirements.txt
-
-Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
-
+  	3. Streamlit run streamlit_app.py (Dauer ca. 10 Min bis die Streamlit startet.
+   <img width="956" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/dbb9586a-01fc-4d75-95e0-109de8994c6a">
 
 ## 📊 3) Data
 ### Data for training the Model
