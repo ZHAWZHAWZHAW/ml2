@@ -13,6 +13,8 @@ fine-tuned_model/data/
 fine-tuned_model/results/
 fine-tuned_model/t5_base/
 streamlit_models/
+test data/
+test-urls.txt
 
 pre-trained_model/bart_model/
 

@@ -1,30 +1,28 @@
-
 import streamlit as st
 from transformers import BartForConditionalGeneration, BartTokenizer, T5ForConditionalGeneration, T5Tokenizer
 import pandas as pd
 import os
 
 ###################################################################################################
+# Paths to the models, which were independently created and trained
+    #bart_model_path = "pre-trained_model/bart_model"
+    #t5_model_path = "fine-tuned_model/t5_base"
+    #fine_tuned_model_path = "fine-tuned_model/results/final_model"
 
-# Pfade zu den Modellen, die eigenständig / lokal erstellt & trainiert wurden
-#bart_model_path = "pre-trained_model/bart_model"
-#t5_model_path = "fine-tuned_model/t5_base"
-#fine_tuned_model_path = "fine-tuned_model/results/final_model"
-
-# Pfade zu den Modellen, welche von Google Drive in streamlit_pages geladen wurden
+# Paths to the models, which were loaded from Google Drive
 bart_model_path = "streamlit_models/bart_model"
 t5_model_path = "streamlit_models/t5_base_model"
 fine_tuned_model_path = "streamlit_models/fine_tuned_model"
 
-###################################################################################################
-
-# Laden der Modelle und Tokenizer
+# Load models and tokenizers
 bart_tokenizer = BartTokenizer.from_pretrained(bart_model_path)
 bart_model = BartForConditionalGeneration.from_pretrained(bart_model_path, use_safetensors=True)
 t5_tokenizer = T5Tokenizer.from_pretrained(t5_model_path)
 t5_model = T5ForConditionalGeneration.from_pretrained(t5_model_path, use_safetensors=True)
 fine_tuned_tokenizer = T5Tokenizer.from_pretrained(fine_tuned_model_path)
 fine_tuned_model = T5ForConditionalGeneration.from_pretrained(fine_tuned_model_path, use_safetensors=True)
+
+# Function to retrieve model information
 def get_model_info(model):
     return {
         "Model Name": model.config.name_or_path,
@@ -36,6 +34,10 @@ def get_model_info(model):
         "Number of Layers": str(model.config.num_layers if hasattr(model.config, 'num_layers') else model.config.encoder_layers),
         "Vocabulary Size": str(model.config.vocab_size),
     }
+###################################################################################################
+
+# Streamlit page to display model information
+###################################################################################################
 def show_model_info_page():
     st.header("📊 Model Information")
     bart_info = get_model_info(bart_model)
@@ -59,8 +61,10 @@ def show_model_info_page():
     - **Training Data:** 
         - **T5 Base Model:** Trained on a broad dataset, including the Colossal Clean Crawled Corpus (C4).
         - **Fine-tuned T5 Model:** Initially trained on the same broad dataset as the T5 Base Model, but further trained (fine-tuned) on the XSum dataset, which is a large dataset specifically for summarization tasks.
+    
     In summary, while the architecture of both models is the same, the fine-tuned model has learned to better handle summarization tasks due to its specialized training on the XSum dataset.
     """)
-    
+###################################################################################################
+
 if __name__ == "__main__":
     show_model_info_page()

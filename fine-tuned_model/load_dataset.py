@@ -32,5 +32,5 @@ def load_and_save_dataset(dataset_name, subset_name=None):
 
     print(f"Datasets saved to {data_folder}")
 
-# Beispiel: XSum Datensatz laden und speichern
+# XSum Datensatz laden und speichern
 load_and_save_dataset('xsum')
