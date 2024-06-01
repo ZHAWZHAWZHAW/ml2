@@ -53,6 +53,21 @@ Of course, you can also generate and train the models yourself by using the code
    <img width="164" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/848fc0d3-a51a-4a0c-bab4-0761342b1513">
 
 
+### ℹ️ Screenshots of the Application
+
+| Screen         | Screenshot                                                                                                        |
+|----------------|-------------------------------------------------------------------------------------------------------------------|
+| **Home**       | ![Home Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/99c2cb02-eaf5-41f5-8168-267c659f18fd)          |
+| **PDF**        | ![PDF Screen 1](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3bfb7804-6301-48de-8b77-050067faed54)         |
+|                | ![PDF Screen 2](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7003051c-c06f-40ff-93f7-4f9ed6a7e4d2)         |
+|                | ![PDF Screen 3](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/7453ecf2-94d6-4838-8111-891e0db0179a)         |
+|                | ![PDF Screen 4](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/616f7ac0-6a50-4197-b12a-90c7bfc3b01e)         |
+|                | ![PDF Screen 5](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/f864e71c-da2d-477c-ab94-a54b2362a581)         |
+| **URL**        | ![URL Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3ffe5d66-b0db-45f9-b836-dd212b74f269)           |
+| **Model Info** | ![Model Info Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/3e3fdc33-a9ee-45b8-b365-87fe69a6c578)    |
+| **Model Validation** | ![Model Validation Screen](https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/e9b73106-ebe0-4490-87d2-66926d08e56b)  |
+
+
 ## 📊 Data <a name="-3-data"></a>
 ### 3.1 Data for Training the Model <a name="31-data-for-training-the-model"></a>
 The XSum (Extreme Summarization) dataset was chosen for training the T5 model due to its suitability for generating concise and informative summaries. The XSum dataset contains a wide range of articles from the British Broadcasting Corporation (BBC) and is designed specifically for the task of abstractive summarization. Each article in the dataset is paired with a one-sentence summary, making it an ideal choice for training models aimed at creating brief and accurate news summaries.
