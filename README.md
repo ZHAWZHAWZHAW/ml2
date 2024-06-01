@@ -27,14 +27,14 @@ The motivation behind this project stems from the need for an efficient way to d
 This project is highly relevant as it addresses a common pain point experienced by many in the digital age. By leveraging advanced Natural Language Processing (NLP) techniques, this news summarizer can distill essential information from lengthy articles, providing users with quick and comprehensive insights. This not only saves time but also ensures that users stay informed about important topics without the burden of sifting through redundant information.
 
 ## 🔧 Set-up the Project <a name="-2-set-up-the-project"></a>
-
-⚠️⚠️⚠️ Important Information:
+⚠️⚠️⚠️
+Important Information:
 I have saved the three models used in Google Drive. As soon as you start the Streamlit app (command: streamlit run streamlit_app.py), the application will download the three pre-trained models and load them into the "streamlit_models" folder. The Streamlit app will then start and use the newly downloaded models.
 
 -> So, you only need to start the Streamlit app to get the three models and have the application running.
 
 Of course, you can also generate and train the models yourself by using the code in the "fine-tuned_model" and "pre-trained_model" folders.
-
+⚠️⚠️⚠️
 
 Step-by-step:
 1. Git clone
