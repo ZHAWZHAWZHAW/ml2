@@ -95,9 +95,9 @@ def summarize_text_with_t5_base(text):
 ```
 By carefully crafting these prompts, I was able to ensure that both the BART and T5 models could effectively summarize text from various sources. This use of prompt engineering is crucial in guiding the models to generate high-quality, concise, and informative summaries, making the news summarizer a valuable tool for users seeking quick insights from extensive content.
 
-##✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
-###5.1 Analyses <a name="51-analyses"></a>
-(Details about analyses...)
+## ✅ Interpretation and Validation <a name="-5-interpretation-and-validation"></a>
+### 5.1 Analyses <a nname="51-analyses"></a>
+T5
 
-###5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
-(Information about limitations and future steps...)
+### 5.2 Limitation & Next Steps <a name="52-limitation--next-steps"></a>
+T5
