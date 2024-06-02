@@ -107,6 +107,9 @@ Here are some key reasons for selecting the XSum dataset:
 
 By using the XSum dataset, the trained T5 model can effectively learn to generate high-quality summaries that capture the essence of news articles, thereby meeting the needs of users who require quick and comprehensive insights.
 
+<img width="167" alt="image" src="https://github.com/ZHAWZHAWZHAW/ml2/assets/95766456/12d2b09a-c6e5-40a6-9d0c-df896b9d928b">
+
+
 ### 3.2 Data for Testing the Application <a name="32-data-for-testing-the-application"></a>
 In the project folder "Test Data," you will find a collection of PDFs and URLs with which you can test my application.
 
